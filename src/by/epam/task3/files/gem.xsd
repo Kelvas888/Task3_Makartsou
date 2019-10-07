@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">
+            Task 3
+            Makartsou Uladzislau
+        </xsd:documentation>
+    </xsd:annotation>
+
+    <!-- Main Element of the Schema -->
+    <xsd:element name="Gem">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Jewel" type="jewelType" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- Type for diamonds-->
+    <xsd:complexType name="jewelType">
+        <xsd:sequence>
+            <xsd:element name="Name" type="xsd:string"/>
+            <xsd:element name="Preciousness" type="preciousnessType"/>
+            <xsd:element name="Origin" type="originType"/>
+            <xsd:element name="VisualParameters" type="visualType"/>
+            <xsd:element name="Value" type="valueType"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:ID" use="required"/>
+    </xsd:complexType>
+
+    <!-- Type of the diamonds (can be precious, semiprecious) -->
+    <xsd:simpleType name="preciousnessType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="precious"/>
+            <xsd:enumeration value="semiprecious"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- Place of production (must begin with capital letter) -->
+    <xsd:simpleType name="originType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-Z][a-zA-Z]+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+    <!-- Type for Gem Characteristics -->
+    <xsd:complexType name="visualType">
+        <xsd:sequence>
+            <xsd:element name="appearance" type="appearanceType"/>
+        </xsd:sequence>
+        <xsd:attribute name="transparency" type="transparencyType" use="required"/>
+    </xsd:complexType>
+
+
+    <!-- transparency anything jewelry -->
+    <xsd:simpleType name="transparencyType">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="100"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+    <!-- colors and may be other prams  -->
+    <xsd:complexType name="appearanceType">
+        <xsd:sequence>
+            <xsd:element name="color" type="colorType"/>
+            <xsd:element name="edges" type="edgesType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+
+    <!-- colors anything jewelry -->
+    <xsd:simpleType name="colorType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="red"/>
+            <xsd:enumeration value="white"/>
+            <xsd:enumeration value="yellow"/>
+            <xsd:enumeration value="purple"/>
+            <xsd:enumeration value="blue"/>
+            <xsd:enumeration value="green"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+    <!-- edges anything jewelry -->
+    <xsd:simpleType name="edgesType">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="7"/>
+            <xsd:maxInclusive value="14"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- value anything jewelry -->
+    <xsd:simpleType name="valueType">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

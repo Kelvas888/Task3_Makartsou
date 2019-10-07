@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Gem xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+     xsi:noNamespaceSchemaLocation='gem.xsd'>
+
+    <Jewel id="_1">
+        <Name>New York</Name>
+        <Preciousness>precious</Preciousness>
+        <Origin>USA</Origin>
+        <VisualParameters transparency="25">
+            <appearance>
+                <color>red</color>
+                <edges>12</edges>
+            </appearance>
+        </VisualParameters>
+        <Value>76</Value>
+    </Jewel>
+
+    <Jewel id="_2">
+        <Name>Los Angeles</Name>
+        <Preciousness>semiprecious</Preciousness>
+        <Origin>USA</Origin>
+        <VisualParameters transparency="55">
+            <appearance>
+                <color>yellow</color>
+                <edges>12</edges>
+            </appearance>
+        </VisualParameters>
+        <Value>12</Value>
+    </Jewel>
+
+    <Jewel id="_3">
+        <Name>Boston</Name>
+        <Preciousness>precious</Preciousness>
+        <Origin>USA</Origin>
+        <VisualParameters transparency="15">
+            <appearance>
+                <color>green</color>
+                <edges>9</edges>
+            </appearance>
+        </VisualParameters>
+        <Value>87</Value>
+    </Jewel>
+
+    <Jewel id="_4">
+        <Name>London</Name>
+        <Preciousness>precious</Preciousness>
+        <Origin>UK</Origin>
+        <VisualParameters transparency="17">
+            <appearance>
+                <color>blue</color>
+                <edges>12</edges>
+            </appearance>
+        </VisualParameters>
+        <Value>54</Value>
+    </Jewel>
+
+    <Jewel id="_5">
+        <Name>Moskov</Name>
+        <Preciousness>semiprecious</Preciousness>
+        <Origin>RF</Origin>
+        <VisualParameters transparency="85">
+            <appearance>
+                <color>white</color>
+                <edges>10</edges>
+            </appearance>
+        </VisualParameters>
+        <Value>34</Value>
+    </Jewel>
+</Gem>
